@@ -1,0 +1,28 @@
+﻿<Window x:Class="BookStoreLIB.LoginDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStoreLIB"
+        mc:Ignorable="d"
+        Title="Login" Height="130" Width="304">
+    <Grid Margin="0,0,2,0" HorizontalAlignment="Right" Width="290">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" Margin="0,0,148,4" Content="User Name:"/>
+        <TextBox Name="nameTextBox" Grid.Row="0" Margin="71,2,-24,2" Grid.ColumnSpan="2"/>
+        <Label Grid.Column="0" Grid.Row="1" Margin="4,0,148,2" Content="Password:"/>
+        <PasswordBox Name="passwordTextBox" Grid.Row="1" Margin="71,2,-24,2" Grid.ColumnSpan="2"/>
+        <StackPanel HorizontalAlignment="Center" Grid.Row="3" Orientation="Horizontal" Margin="80,0,-36,45" Width="210" Grid.ColumnSpan="2">
+            <Button Name="OkButton" Click="OkButton_Click" IsDefault="True" MinWidth="80" Margin="0,10,5,5">OK</Button>
+            <Button Name="CancelButton" Click="CancelButton_Click" IsCancel="True" MinWidth="80" Margin="30,10,5,5" Content="Cancel"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
