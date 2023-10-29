@@ -19,9 +19,11 @@
         <TextBox Name="nameTextBox" Grid.Row="0" Margin="71,2,-24,2" Grid.ColumnSpan="2"/>
         <Label Grid.Column="0" Grid.Row="1" Margin="4,0,148,2" Content="Password:"/>
         <PasswordBox Name="passwordTextBox" Grid.Row="1" Margin="71,2,-24,2" Grid.ColumnSpan="2"/>
-        <StackPanel HorizontalAlignment="Center" Grid.Row="3" Orientation="Horizontal" Margin="80,0,-36,45" Width="210" Grid.ColumnSpan="2">
-            <Button Name="OkButton" Click="OkButton_Click" IsDefault="True" MinWidth="80" Margin="0,10,5,5">OK</Button>
-            <Button Name="CancelButton" Click="CancelButton_Click" IsCancel="True" MinWidth="80" Margin="30,10,5,5" Content="Cancel"/>
+        <StackPanel HorizontalAlignment="Center" Grid.Row="2" Orientation="Horizontal" Margin="10,0,-34,45" Width="270">
+            <Button x:Name="CreateCustomerAccountButton" Click="CreateCustomerAccountButton_Click" MinWidth="90" Margin="0,10,5,5" Content="Create Account"/>
+            <Button x:Name="OkButton" Click="OkButton_Click" IsDefault="True" MinWidth="80" Margin="0,10,5,5" Content="OK"/>
+            <Button x:Name="CancelButton" Click="CancelButton_Click" IsCancel="True" MinWidth="80" Margin="0,10,5,5" Content="Cancel"/>
+
         </StackPanel>
 
     </Grid>

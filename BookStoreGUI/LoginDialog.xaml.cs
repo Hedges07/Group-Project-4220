@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using BookStoreGUI;
 
 namespace BookStoreLIB
 {
@@ -53,5 +54,16 @@ namespace BookStoreLIB
             this.Close();
         }
 
+        private void CreateCustomerAccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            AccountCreationDialog dlg = new AccountCreationDialog();
+            dlg.Owner = this;
+            dlg.ShowDialog();
+            // Process data entered by user if dialog box is accepted
+            if (dlg.DialogResult == true)
+            {
+                
+            }
+        }
     }
 }
