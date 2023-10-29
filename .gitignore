@@ -1,3 +1,7 @@
 
 *.cache
 BookStoreGUI/obj/Debug/LoginDialog.baml
+BookStoreGUI/.vs/BookStoreGUI/v16/.suo
+*.cache
+*.lref
+*.baml
