@@ -23,9 +23,13 @@ namespace BookStoreGUI
     /// </summary>
     public partial class OrderItemDialog : Window
     {
-        public OrderItemDialog()
+
+        int quantity;
+
+        public OrderItemDialog(int quantity)
         {
             InitializeComponent();
+            this.quantity = quantity;
         }
         private void okButton_Click(object sender, RoutedEventArgs e)
         {
@@ -34,6 +38,22 @@ namespace BookStoreGUI
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = false;
+        }
+
+
+        private void quantityTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            string result = quantityTextBox.Text + e.Text;
+
+            if (!int.TryParse(result, out int value))
+            {
+                e.Handled = true;
+            }
+            else if(value > quantity || value <= 0)
+            {
+                e.Handled = true;
+            }
+           
         }
     }
 }

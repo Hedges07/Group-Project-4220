@@ -55,12 +55,16 @@ namespace BookStoreGUI
         }
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            OrderItemDialog orderItemDialog = new OrderItemDialog();
+      
             DataRowView selectedRow;
+            int remaining;
             selectedRow = (DataRowView)this.ProductsDataGrid.SelectedItems[0];
+            int.TryParse(selectedRow.Row.ItemArray[8].ToString(), out remaining);
+            OrderItemDialog orderItemDialog = new OrderItemDialog(remaining);
             orderItemDialog.isbnTextBox.Text = selectedRow.Row.ItemArray[0].ToString();
             orderItemDialog.titleTextBox.Text = selectedRow.Row.ItemArray[2].ToString();
             orderItemDialog.priceTextBox.Text = selectedRow.Row.ItemArray[4].ToString();
+            orderItemDialog.quantity_Count.Text = "Remaining: " + remaining.ToString();
             orderItemDialog.Owner = this;
             orderItemDialog.ShowDialog();
             if (orderItemDialog.DialogResult == true)

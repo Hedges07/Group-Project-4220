@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Andrew\source\repos\Bookstoreshit\BookStoreGUI\obj\Debug\
+C:\Users\ryohe\Documents\GitHub\Group-Project-4220\BookStoreGUI\obj\Debug\
 BookStoreGUI
 none
 false
 DEBUG;TRACE
-C:\Users\Andrew\source\repos\Bookstoreshit\BookStoreGUI\App.xaml
-3436067559
-2400435447
-11-1984556820
-14-2101378360
+C:\Users\ryohe\Documents\GitHub\Group-Project-4220\BookStoreGUI\App.xaml
+3-1005567013
+21052208640
+11162075497
+14742930308
 MainWindow.xaml;LoginDialog.xaml;OrderItemDialog.xaml;
 
-False
+True
 
